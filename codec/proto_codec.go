@@ -114,9 +114,9 @@ func init() {
 		}
 		for _, m := range matches { //매칭된 파일 각각 등록
 			if err := RegisterDescriptorSetFile(m); err != nil {
-				log.Printf("[parser][proto] register desc failed: %s: %v\n", m, err) //실패
+				log.Printf("[proto] register desc failed: %s: %v\n", m, err) //실패
 			} else {
-				log.Printf("[parser][proto] registered descriptor: %s\n", m) //성공
+				log.Printf("[proto] registered descriptor: %s\n", m) //성공
 			}
 		}
 	}
@@ -182,3 +182,4 @@ func (pc protoCodec) Serialize(am *abstraction.AbstractMessage, opts SerializeOp
 	}
 	return proto.Marshal(msg)
 } //AbstractMessage를 protobuf 바이너리로 변환
+

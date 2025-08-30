@@ -1,3 +1,4 @@
+//.proto, .pb.go, .desc(option) 필요
 package codec
 
 import (
@@ -182,4 +183,5 @@ func (pc protoCodec) Serialize(am *abstraction.AbstractMessage, opts SerializeOp
 	}
 	return proto.Marshal(msg)
 } //AbstractMessage를 protobuf 바이너리로 변환
+
 
